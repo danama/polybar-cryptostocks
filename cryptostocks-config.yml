@@ -1,0 +1,38 @@
+general:
+  crypto_base_currency: USD
+  stock_roundnumber: 1
+  colors: True
+  up_color: "%{F#03c03c}"
+  down_color: "%{F#f00}"
+
+stocks:
+  AMC:
+    name: 'AMC Entertainment Holdings Inc'
+    ticker: 'AMC'
+    label: 'AMC'
+  AAPL:
+    name: 'Apple Inc'
+    ticker: 'AAPL'
+    label: 'AAPL'
+
+cryptos:
+  bitcoin:
+    name: 'bitcoin'
+    ticker: 'BTC'
+    icon: ''
+    display: 'both'
+  ethereum:
+    name: 'ethereum'
+    ticker: 'ETH'
+    icon: ''
+    display: 'both'
+  cardano:
+    name: 'cardano'
+    ticker: 'ADA'
+    icon: ''
+    display: 'both'
+  monero:
+    name: 'monero'
+    ticker: 'XMR'
+    icon: ''
+    display: 'both'
