@@ -72,10 +72,12 @@ stocks:
     name: 'AMC Entertainment Holdings Inc'
     ticker: 'AMC'
     label: 'AMC'
+    display: 'both'
   AAPL:
     name: 'Apple Inc'
     ticker: 'AAPL'
     label: 'AAPL'
+    display: 'both'
 
 cryptos:
   bitcoin:
@@ -147,7 +149,7 @@ You can use a tool like "Font Manager" to easily copy/paste the desired icon to 
 
 # To work on
 
-- add 24h prices variations for stocks
+- ~~add 24h prices variations for stocks~~
 - ~~add function for crypto requests~~
 - separators ( | ) as optional
 - look into interactions with the module
