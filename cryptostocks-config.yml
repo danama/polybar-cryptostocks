@@ -10,10 +10,12 @@ stocks:
     name: 'AMC Entertainment Holdings Inc'
     ticker: 'AMC'
     label: 'AMC'
+    display: 'both'
   AAPL:
     name: 'Apple Inc'
     ticker: 'AAPL'
     label: 'AAPL'
+    display: 'both'
 
 cryptos:
   bitcoin:

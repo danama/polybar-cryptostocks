@@ -24,9 +24,20 @@ down_color = config['general']['down_color']
 reset_color = '%{F-}'
 
 
-def stockdata(ticker,label):
+def stockdata(ticker,label,display,colors):
     tickerPrice = si.get_live_price(ticker)
-    output = label + ': ' + str(round(tickerPrice, roundNumber))
+    tickerData = si.get_quote_data(ticker)
+    change_24 = round(float(tickerData['regularMarketChangePercent']),2)
+    if colors == True:
+        color = up_color if change_24 >= 0 else down_color
+    else:
+        color = reset_color
+    if display == 'both' or display == 'none':
+        output = label + ': ' + str(round(tickerPrice, roundNumber)) + ' ' + color + str(change_24) + '%' + reset_color
+    elif display == 'percentage':
+        output = color + str(change_24) + '%' + reset_color
+    elif display == 'price':
+        output = color + str(tickerPrice) + reset_color
     return output
 
 def cryptodata(name,icon,display,colors):
@@ -48,7 +59,7 @@ def cryptodata(name,icon,display,colors):
 
 for stock in config['stocks'].values():
     try:
-        stocks = stockdata(stock['ticker'],stock['label'])
+        stocks = stockdata(stock['ticker'], stock['label'], stock['display'], config['general']['colors'])
         sys.stdout.write(f'{stocks} | ')
     except:
         sys.stdout.write('Failed to get info')
